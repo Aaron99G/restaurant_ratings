@@ -25,14 +25,15 @@ def add_new():
     for line in scores:
         print(line)
 
-def quit_sim():
-    print('break')
     
 user_choice = int(input("Would you like to 1) See current ratings? 2) Add a new restaurant? 3) Quit?\nEnter the number corresponding to the question:"))
 
-if user_choice == 1:
-    see_scores()
-elif user_choice == 2:
-    add_new()
-elif user_choice == 3:
-    quit_sim()
+while user_choice != 3:
+    if user_choice == 1:
+        see_scores()
+    elif user_choice == 2:
+        add_new()
+    user_choice = int(input("Would you like to 1) See current ratings? 2) Add a new restaurant? 3) Quit?\nEnter the number corresponding to the question:"))
+else:
+    print("See ya later!")
+    
