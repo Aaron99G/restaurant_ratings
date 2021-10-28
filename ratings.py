@@ -22,12 +22,13 @@ def add_new():
     new_rating = (new_rest + ":" + str(new_score) + "\n")
     scores.append(new_rating)
 
-    print(scores)
+    for line in scores:
+        print(line)
 
 def quit_sim():
     print('break')
     
-user_choice = input("Would you like to 1) See current ratings? 2) Add a new restaurant? 3) Quit?\nEnter the number corresponding to the question:")
+user_choice = int(input("Would you like to 1) See current ratings? 2) Add a new restaurant? 3) Quit?\nEnter the number corresponding to the question:"))
 
 if user_choice == 1:
     see_scores()
